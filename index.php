@@ -1,3 +1,15 @@
+<?php
+    $lang = $_GET['lang'];
+
+    if (isset($_POST['english'])) {
+        $lang = "en";
+    }
+
+    if (isset($_POST['spanish'])) {
+        $lang = "es";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,33 +32,79 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Codetecc Logo" height="50px"></a>
+                    <?php
+                        if ($lang == "es")
+                            echo "<a class='navbar-brand' href='index.php?lang=es'><img src='assets/img/logo.png' alt='Codetecc Logo' height='60px'></a>";
+                        else
+                            echo "<a class='navbar-brand' href='index.php?lang=en'><img src='assets/img/logo.png' alt='Codetecc Logo' height='60px'></a>";
+                    ?>
+                </div>
+                <div class="navbar-right">
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" name="languaje">
+                        <?php
+                            if ($lang == "es") {
+                                echo "<p style='display:inline; margin-right:20px'>Idioma</p>";
+                                echo "Sirve!";
+                            } else {
+                                echo "<p style='display:inline; margin-right:20px'>Languaje</p>";
+                            }  
+                        ?>
+                        <button type="submit" name="english"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
+                        &nbsp
+                        <button type="submit" name="spanish"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
+                    </form>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <br>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="prices.html">Prices</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
+                    <br>
+                    <?php
+                        if (isset($_POST['spanish'])) {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php'>Inicio</a></li>";
+                            echo "      <li><a href='services.php?lang=es'>Servicios</a></li>";
+                            echo "      <li><a href='prices.php'>Precios</a></li>";
+                            echo "      <li><a href='contact.php'>Contacto</a></li>";
+                            echo "</ul>";
+                        } else {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php'>Home</a></li>";
+                            echo "      <li><a href='services.php'>Services</a></li>";
+                            echo "      <li><a href='prices.php'>Prices</a></li>";
+                            echo "      <li><a href='contact.php'>Contact</a></li>";
+                            echo "</ul>";
+                        }
+                ?>  
                 </div>
             </div>
         </nav>
 
         <div class="jumbotron">
             <h1>CODETECC<sup><small>&copy</small></sup></h1>
-            <p>IT technologies for your business.</p>
+            <?php
+                if (isset($_POST['spanish'])) {
+                    echo "<p>Consultores en Desarrollos Tecnologicos de Computacion</p>";
+                } else {
+                    echo "<p>IT technologies for your business.</p>";
+                }
+            ?>
         </div>
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>About Us</h2>
-                    <br>
-                    <h4 class="justify">We are a company with the objective of providing you telecommunications and security solutions 
-                    for your business, using the best technologies and giving our customers a service of the highest quality 
-                    for your total satisfaction.</h4>
+                    <?php
+                        if (isset($_POST['spanish'])) {
+                            echo "<h2>Quienes somos?</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Somos una empresa con el objetico de proveer servicios de telecomunicaciones y seguridad para su negocio, 
+                            utilizando las mejores tecnologias y otorgandole a nuestros clientes un servicio de la mas alta calidad para su total satisfaccion.</h4>";
+                        }else{
+                            echo "<h2>About Us</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>We are a company with the objective of providing you telecommunications and security solutions 
+                            for your business, using the best technologies and giving our customers a service of the highest quality for your total satisfaction.</h4>";
+                        }
+                    ?>
                 </div>
                 <div class="col-sm-1"></div>
                 <div class="col-sm-2">

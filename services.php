@@ -1,3 +1,17 @@
+<?php
+    $lang = $_GET['lang'];
+
+    if (isset($_POST['english'])) {
+        $lang = "en";
+    }
+
+    if (isset($_POST['spanish'])) {
+        $lang = "es";
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,14 +34,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Codetecc Logo" height="50px"></a>
+                    <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Codetecc Logo" height="60px"></a>
+                </div>
+                <div class="navbar-right">
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" name="languaje">
+                        <?php
+                            if ($lang == "es") {
+                                echo "<p style='display:inline; margin-right:20px'>Idioma</p>";
+                            } else {
+                                echo "<p style='display:inline; margin-right:20px'>Languaje</p>";
+                            }  
+                        ?>
+                        <button type="submit" name="english"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
+                        &nbsp
+                        <button type="submit" name="spanish"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
+                    </form>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <br>
+                    <br>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="prices.php">Prices</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
