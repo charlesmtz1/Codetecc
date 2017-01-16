@@ -1,12 +1,13 @@
 <?php
-    $lang = $_GET['lang'];
 
-    if (isset($_POST['english'])) {
-        $lang = "en";
-    }
+    $lang = null;
 
-    if (isset($_POST['spanish'])) {
-        $lang = "es";
+    if (isset($_GET['lang'])) {
+        if ($_GET['lang'] == "en") {
+            $lang = "en";
+        }else {
+            $lang = "es";
+        }   
     }
 ?>
 
@@ -40,7 +41,7 @@
                     ?>
                 </div>
                 <div class="navbar-right">
-                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" name="languaje">
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET" name="languaje">
                         <?php
                             if ($lang == "es") {
                                 echo "<p style='display:inline; margin-right:20px'>Idioma</p>";
@@ -48,9 +49,9 @@
                                 echo "<p style='display:inline; margin-right:20px'>Languaje</p>";
                             }  
                         ?>
-                        <button type="submit" name="english"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="en"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
                         &nbsp
-                        <button type="submit" name="spanish"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="es"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
                     </form>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -86,7 +87,7 @@
             </ol>
 
             <div class="carousel-inner" role="listbox">
-                <div class="item active" style="background-image:url('assets/img/Pic1.jpg'); height:700px;">
+                <div class="item active" style="background-image:url('assets/img/Pic1.jpg'); background-size:cover; height:450px;">
                     <div class="carousel-caption">
                         <!--<h1>CODETECC<sup><small>&copy</small></sup></h1>-->
                         <?php
@@ -111,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="item" style="background-image:url('assets/img/Security.jpg'); height:700px;">
+                <div class="item" style="background-image:url('assets/img/Security.jpg'); background-size:cover; height:450px;">
                     <div class="carousel-caption">
                         <?php
                             if ($lang == "es") {
@@ -131,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="item" style="background-image:url('assets/img/switch.jpg'); height:700px;">
+                <div class="item" style="background-image:url('assets/img/switch.jpg'); background-size:cover; height:450px;">
                     <div class="carousel-caption">
                         <?php
                             if ($lang == "es") {
@@ -139,7 +140,7 @@
                                 echo "<h4 class='white justify'>El teléfono es una herramienta necesaria para la comunicación, ya sea para una llamada de emergencia, llamar a 
                                     un cliente, saludar a un amigo o incluso ordenar una pizza. A su vez, el internet es una herramienta que es utilizada para casi todas nuestras 
                                     actividades de nuestro día, y es muy difícil pensar un mundo sin el hoy en día.</h4>";
-                                echo "<h4>Nunca se quede incomunicado, con nuestro servicio de instalación de voz y datos siempre estará conectado.</h4>";
+                                echo "<h4 class='white justify'>Nunca se quede incomunicado, con nuestro servicio de instalación de voz y datos siempre estará conectado.</h4>";
                             }else{
                                 echo "<h2 class='white'>You never run out of communication</h2>";
                                 echo "<h4 class='white justify'>The phone is a necessary tool for the communication, either for making a emergency call, call to a customer, 
@@ -151,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="item" style="background-image:url('assets/img/contact.jpg'); height:700px;">
+                <div class="item" style="background-image:url('assets/img/audio.jpg'); background-size:cover; height:450px;">
                     <div class="carousel-caption">
                         <?php
                             if ($lang == "es") {

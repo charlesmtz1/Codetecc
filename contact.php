@@ -1,3 +1,17 @@
+<?php
+    
+    $lang = null;
+
+    if (isset($_GET['lang'])) {
+        if ($_GET['lang'] == "en") {
+            $lang = "en";
+        }else {
+            $lang = "es";
+        }   
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,35 +37,52 @@
                     <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Codetecc Logo" height="60px"></a>
                 </div>
                 <div class="navbar-right">
-                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" name="languaje">
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET" name="languaje">
                         <?php
-                            if (isset($_POST['spanish'])) {
+                            if ($lang == "es") {
                                 echo "<p style='display:inline; margin-right:20px'>Idioma</p>";
                             } else {
                                 echo "<p style='display:inline; margin-right:20px'>Languaje</p>";
                             }  
                         ?>
-                        <button type="submit" name="english"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="en"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
                         &nbsp
-                        <button type="submit" name="spanish"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="es"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
                     </form>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <br>
                     <br>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="prices.php">Prices</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php?lang=es'>Inicio</a></li>";
+                            echo "      <li><a href='services.php?lang=es'>Servicios</a></li>";
+                            echo "      <li><a href='prices.php?lang=es'>Precios</a></li>";
+                            echo "      <li><a href='contact.php?lang=es'>Contacto</a></li>";
+                            echo "</ul>";
+                        } else {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php?lang=en'>Home</a></li>";
+                            echo "      <li><a href='services.php?lang=en'>Services</a></li>";
+                            echo "      <li><a href='prices.php?lang=en'>Prices</a></li>";
+                            echo "      <li><a href='contact.php?lang=en'>Contact</a></li>";
+                            echo "</ul>";
+                        }
+                    ?>
                 </div>
             </div>
         </nav>
 
         <div class="jumbotron">
-            <h1>CODETECC<sup><small>&copy</small></sup></h1>
-            <p>IT technologies for your business.</p>
+            <h1>CODETECC<sup><small style="color: white">&copy</small></sup></h1>
+            <?php
+                if ($lang == "es") {
+                    echo "<p>Consultores en Desarrollos Tecnológicos de Computación</p>";
+                }else {
+                    echo "<p>IT technologies for your business.</p>";
+                }
+            ?>
         </div>
 
        <div class="container-fluid bg-grey">

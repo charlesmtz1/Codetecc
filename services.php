@@ -1,14 +1,14 @@
 <?php
-    $lang = $_GET['lang'];
+    
+    $lang = null;
 
-    if (isset($_POST['english'])) {
-        $lang = "en";
+    if (isset($_GET['lang'])) {
+        if ($_GET['lang'] == "en") {
+            $lang = "en";
+        }else {
+            $lang = "es";
+        }   
     }
-
-    if (isset($_POST['spanish'])) {
-        $lang = "es";
-    }
-
 
 ?>
 
@@ -34,10 +34,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Codetecc Logo" height="60px"></a>
+                    <?php
+                        if ($lang == "es")
+                            echo "<a class='navbar-brand' href='index.php?lang=es'><img src='assets/img/logo.png' alt='Codetecc Logo' height='60px'></a>";
+                        else
+                            echo "<a class='navbar-brand' href='index.php?lang=en'><img src='assets/img/logo.png' alt='Codetecc Logo' height='60px'></a>";
+                    ?>   
                 </div>
                 <div class="navbar-right">
-                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" name="languaje">
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET" name="languaje">
                         <?php
                             if ($lang == "es") {
                                 echo "<p style='display:inline; margin-right:20px'>Idioma</p>";
@@ -45,48 +50,103 @@
                                 echo "<p style='display:inline; margin-right:20px'>Languaje</p>";
                             }  
                         ?>
-                        <button type="submit" name="english"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="en"><img src="assets/img/en.png" alt="Us Flag" height="24px" style="margin:-8px"></button>
                         &nbsp
-                        <button type="submit" name="spanish"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
+                        <button type="submit" name="lang" value="es"><img src="assets/img/es.png" alt="Mex Flag" height="24px" style="margin:-8px"></button>
                     </form>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <br>
                     <br>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="prices.php">Prices</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php?lang=es'>Inicio</a></li>";
+                            echo "      <li><a href='services.php?lang=es'>Servicios</a></li>";
+                            echo "      <li><a href='prices.php?lang=es'>Precios</a></li>";
+                            echo "      <li><a href='contact.php?lang=es'>Contacto</a></li>";
+                            echo "</ul>";
+                        } else {
+                            echo "<ul class='nav navbar-nav navbar-right'>";
+                            echo "      <li><a href='index.php?lang=en'>Home</a></li>";
+                            echo "      <li><a href='services.php?lang=en'>Services</a></li>";
+                            echo "      <li><a href='prices.php?lang=en'>Prices</a></li>";
+                            echo "      <li><a href='contact.php?lang=en'>Contact</a></li>";
+                            echo "</ul>";
+                        }
+                    ?>
                 </div>
             </div>
         </nav>
 
         <div class="jumbotron">
-            <h1>CODETECC<sup><small>&copy</small></sup></h1>
-            <p>IT technologies for your business.</p>
+            <h1>CODETECC<sup><small style="color: white">&copy</small></sup></h1>
+            <?php
+                if ($lang == "es") {
+                    echo "<p>Consultores en Desarrollos Tecnológicos de Computación</p>";
+                }else {
+                    echo "<p>IT technologies for your business.</p>";
+                }
+            ?>
         </div>
 
         <div class="container-fluid text-center">
-            <h2>Our services</h2>
-            <h4>We offer you this services:</h4>
+            <?php
+                if ($lang == "es") {
+                    echo "<h2>Nuestros servicios</h2>";
+                }else {
+                    echo "<h2>Our services</h2>";
+                }
+            ?>
             <br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <span class="glyphicon glyphicon-facetime-video logo-small"></span>
-                    <h4>CCTV Security</h4>
-                    <p>Our description goes here!</p>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h4>Camaras de Seguridad</h4>";
+                            echo "<p>Proteja sus bienes y a sus seres queridos.</p>";
+                        }else {
+                            echo "<h4>CCTV Security</h4>";
+                            echo "<p>Protect your assets and your loveds ones.</p>";
+                        }
+                    ?>
                 </div>
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-tasks logo-small"></span>
-                    <h4>Data Network installation</h4>
-                    <p>Our description goes here!</p>
+                <div class="col-sm-3">
+                    <span class="glyphicon glyphicon-bell logo-small"></span>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h4>Alarma de Seguridad</h4>";
+                            echo "<p>Seguridad para su hogar o negocio incluso si se encuentra fuera.</p>";
+                        }else {
+                            echo "<h4>Alarm Security</h4>";
+                            echo "<p>Security for your home and business also when you go out.</p>";
+                        }
+                    ?>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <span class="glyphicon glyphicon-phone-alt logo-small"></span>
-                    <h4>Voice Network installation</h4>
-                    <p>Our description goes here!</p>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h4>Red de Voz y Datos</h4>";
+                            echo "<p>Nunca se quede incomunicado.</p>";
+                        }else {
+                            echo "<h4>Voice and Data Network</h4>";
+                            echo "<p>You never run out of communication.</p>";
+                        }
+                    ?>
+                </div>
+                <div class="col-sm-3">
+                    <span class="glyphicon glyphicon-music logo-small"></span>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h4>Instalacion de Audio</h4>";
+                            echo "<p>Que el entretenimiento nunca falte en casa.</p>";
+                        }else {
+                            echo "<h4>Audio Installation</h4>";
+                            echo "<p>Entertainment will never be lacking at home.</p>";
+                        }
+                    ?>
                 </div>
             </div> 
         </div>
@@ -129,7 +189,7 @@
             </div>      
         </div>
 
-        <div class="container-fluid gray">
+        <div class="container-fluid bblue">
             <div class="row">
                 <div class="col-sm-8">
                     <h2>Voice Network installation</h2>
@@ -146,6 +206,24 @@
                     <span class="glyphicon glyphicon-question-sign logo"></span>
                 </div>
                 <div class="col-sm-1"></div>
+            </div>      
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="assets/img/pic2.jpg" alt="Security shield" height="250px">
+                </div>
+                <div class="col-sm-8">
+                    <h2>Data Network installation</h2>
+                    <br>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                    ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat.</h4>
+                </div>
             </div>      
         </div>
         
