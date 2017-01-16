@@ -91,6 +91,32 @@
         </div>
 
         <div class="container-fluid">
+            <div class="row">
+                <form>
+                    <fieldset>
+                        <legend>Step one: Choose your installation pack.</legend>
+                        <input type="radio" name="option" value="pack1"> CCTV <br>
+                        <input type="radio" name="option" value="pack2"> CCTV + Voice/Data installation <br>
+                        <input type="radio" name="option" value="pack3"> CCTV + Alarm <br>
+                        <input type="radio" name="option" value="pack4"> Voice/Data installation + Audio installation <br>
+                        <input type="radio" name="option" value="pack5"> Audio installation <br>
+                        <input type="radio" name="option" value="pack6"> Voice/Data installation <br>
+                        <input type="radio" name="option" value="pack7"> All-in-One <br>
+                    </fieldset>
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <form>
+                    <fieldset>
+                        <legend>Step two: Insert your lenght and wide of your house.
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="container-fluid">
             <div class="text-center">
                 <h2>Our prices</h2>
                 <h4>We offer the best prices for you:</h4>
