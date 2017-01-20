@@ -41,7 +41,10 @@ h4 {
 }
 
 .gray{
-    background-color: #bbbbbb;
+    background: linear-gradient(to left, whitesmoke, white);
+    background: -webkit-linear-gradient(left, whitesmoke,white);
+    background: -o-linear-gradient(left, whitesmoke, white);
+    background: -moz-linear-gradient(left,whitesmoke,white);
 }
 
 .bblue{

@@ -150,83 +150,123 @@
                 </div>
             </div> 
         </div>
-
+        <hr>
         <div class="container-fluid gray">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>CCTV Security</h2>
-                    <br>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.</h4>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h2>Camaras de seguridad</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }else {
+                            echo "<h2>CCTV Security</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }
+                    ?>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <span class="glyphicon glyphicon-question-sign logo"></span>
+                <div class="col-sm-4">
+                    <center>
+                        <img src="assets/img/camera.jpg" alt="CCTV Camera" height="250px">
+                    </center>
                 </div>
-                <div class="col-sm-1"></div>
             </div>      
         </div>
-
+        <hr>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="assets/img/pic2.jpg" alt="Security shield" height="250px">
+                    <center>
+                        <img src="assets/img/alarm.jpg" alt="Blue Alarm" height="300px">
+                    </center>
                 </div>
                 <div class="col-sm-8">
-                    <h2>Data Network installation</h2>
-                    <br>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.</h4>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h2>Alarma de seguridad</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }else {
+                            echo "<h2>Alarm Security</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }
+                    ?>
                 </div>
             </div>      
         </div>
-
-        <div class="container-fluid bblue">
+        <hr>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>Voice Network installation</h2>
-                    <br>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.</h4>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h2>Red de Voz y Datos</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }else {
+                            echo "<h2>Voice and Data Network</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }
+                    ?>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <span class="glyphicon glyphicon-question-sign logo"></span>
+                <div class="col-sm-4">
+                    <center>
+                        <img src="assets/img/network.jpg" alt="Network Cable" height="300px">
+                    </center>
                 </div>
-                <div class="col-sm-1"></div>
             </div>      
         </div>
-
+        <hr>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="assets/img/pic2.jpg" alt="Security shield" height="250px">
+                    <center>
+                        <img src="assets/img/home.jpg" alt="Home Theater" height="300px">
+                    </center>    
                 </div>
                 <div class="col-sm-8">
-                    <h2>Data Network installation</h2>
-                    <br>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.</h4>
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h2>Instalacion de Audio</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }else {
+                            echo "<h2>Audio Installation</h2>";
+                            echo "<br>";
+                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                        }
+                    ?>
                 </div>
             </div>      
         </div>
-        
+        <hr>        
         <footer class="container-fluid text-center">
             <a href="#top" title="To Top">
                 <span class="glyphicon glyphicon-chevron-up"></span>

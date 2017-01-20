@@ -157,20 +157,14 @@
                         <?php
                             if ($lang == "es") {
                                 echo "<h2 class='white'>Entretenimiento para su hogar</h2>";
-                                echo "<h4 class='white justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                        ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                                        mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                                        commodo consequat.</h4>";
+                                echo "<h4 class='white justify'>La mejor manera de relajarse en casa es en su espacio personal para su entretenimiento, acompanado de sus
+                                        amigos y familiares. Ya sea escuchando musica, viendo una pelicula o que usted realice alguna reunion, tenga la seguridad de que 
+                                        contara con una instalacion de su equipo de sonido optima para que no falte el entretenimiento en su hogar.</h4>";
                             }else{
                                 echo "<h2 class='white'>Entertainment for your home</h2>";
-                                echo "<h4 class='white justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                        ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                                        mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                                        commodo consequat.</h4>";
+                                echo "<h4 class='white justify'>The best way to relax at home is in your personal space for your entertainment, accompanied by your friends 
+                                    and family. Whether listening to music, watching a movie or having a meeting, be sure to have an installation of your optimal sound 
+                                    equipment so you do not miss the entertainment in your home.</h4>";
                             }
                         ?>
                     </div>
