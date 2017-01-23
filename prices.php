@@ -91,6 +91,101 @@
         </div>
 
         <div class="container-fluid">
+            <div class="row">
+                <div class="text-center">
+                    <?php
+                        if ($lang == "es") {
+                            echo "<h2>Arma tu paquete</h2>";
+                            echo "<h4>Sigue los pasos para crear tu paquete y proporcionarte tu precio.</h4>";
+                        } else {
+                            echo "<h2>Make your pack</h2>";
+                            echo "<h4>Follow the steps below to make your pack and give you the price for it.</h4>";
+                        }
+                    ?>
+                </div>
+                <br><br>
+                <form>
+                    <fieldset>
+                        <?php
+                            if ($lang == "es") {
+                                echo "<legend>Paso uno: Selecciona tu paquete de instalacion.</legend>";
+                                echo "<input type='radio' name='option' value='pack1'> CCTV <br>";
+                                echo "<input type='radio' name='option' value='pack2'> CCTV + Instalacion de voz y datos <br>";
+                                echo "<input type='radio' name='option' value='pack3'> CCTV + Alarma <br>";
+                                echo "<input type='radio' name='option' value='pack4'> Instalacion de voz y datos + Instalacion de audio <br>";
+                                echo "<input type='radio' name='option' value='pack5'> Instalacion de audio <br>";
+                                echo "<input type='radio' name='option' value='pack6'> Instalacion de voz y datos <br>";
+                                echo "<input type='radio' name='option' value='pack7'> Todo en Uno<br>";
+                            } else {
+                                echo "<legend>Step one: Choose your installation pack.</legend>";
+                                echo "<input type='radio' name='option' value='pack1'> CCTV <br>";
+                                echo "<input type='radio' name='option' value='pack2'> CCTV + Voice/Data installation <br>";
+                                echo "<input type='radio' name='option' value='pack3'> CCTV + Alarm <br>";
+                                echo "<input type='radio' name='option' value='pack4'> Voice/Data installation + Audio installation <br>";
+                                echo "<input type='radio' name='option' value='pack5'> Audio installation <br>";
+                                echo "<input type='radio' name='option' value='pack6'> Voice/Data installation <br>";
+                                echo "<input type='radio' name='option' value='pack7'> All-in-One <br>";
+                            }
+                        ?>
+                    </fieldset>
+                </form>
+            </div>
+            <br><br>
+            <div class="row">
+                <form>
+                    <fieldset>
+                        <?php
+                            if ($lang == "es") {
+                                echo "<legend>Paso dos: Especifique las medidas de largo y ancho de su hogar.</legend>";
+                            }else {
+                                echo "<legend>Step two: Specify the lenght and wide of your house.</legend>";
+                            }
+                        ?>
+                        <br><br>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                            <center>
+                                <?php
+                                    if ($lang == "es") {
+                                        echo "<label for='length'>Largo:</label><br>";
+                                    } else {
+                                        echo "<label for='length'>Length:</label><br>";
+                                    }
+                                ?>
+                                <input type="number" class="form-control" name="length" value="0" min="0" max="25">Mts
+                                <br><br><br>
+                                <?php
+                                    if ($lang == "es") {
+                                        echo "<label for='width'>Ancho:</label><br>";
+                                    } else {
+                                        echo "<label for='width'>Width:</label><br>";
+                                    }
+                                ?>
+                                <input type="number" class="form-control" name="width" value="0" min="0" max="25">Mts
+                                <br><br>
+                                <?php
+                                    if ($lang == "es") {
+                                        echo "<input type='button' name='send' value='Envia tus datos' style='float:left' onclick='drawPlain(this.form)'>";
+                                        echo "<input type='button' name='clear' value='Limpiar' style='float:right' onclick='limpiar()'>";
+                                    } else {
+                                        echo "<input type='button' name='send' value='Send your sizes' style='float:left' onclick='drawPlain(this.form)'>";
+                                        echo "<input type='button' name='clear' value='Clear' style='float:right' onclick='limpiar()'>";
+                                    }
+                                    
+                                ?>
+                            </center>
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-7">
+                            <canvas id="house" height="300px" width="500px" style="border: 1px solid lightgray"></canvas>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="container-fluid">
             <div class="text-center">
                 <h2>Our prices</h2>
                 <h4>We offer the best prices for you:</h4>
@@ -174,6 +269,7 @@
             <p>Information of the webmaster</p> 
         </footer>      
 
+        <script src="assets/js/canvas.js"></script>
         <script src="assets/js/jquery-1.10.2.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.metisMenu.js"></script>
