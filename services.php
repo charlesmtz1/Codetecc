@@ -150,7 +150,7 @@
                 </div>
             </div> 
         </div>
-        <hr>
+        
         <div class="container-fluid gray">
             <div class="row">
                 <div class="col-sm-8">
@@ -158,17 +158,17 @@
                         if ($lang == "es") {
                             echo "<h2>Camaras de seguridad</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Tenemos a su disposicion nuestro servicio de instalacion de camaras de seguridad. Siempre este al tanto de todos los 
+                                eventos que ocurran dentro y fuera de su hogar o negocio y mantenga a sus seres queridos y pertenencias seguros.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=es'><button type='button' class='btn btn-lg'>Arma tu paquete!</button></a>";
                         }else {
                             echo "<h2>CCTV Security</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>We have at your disposal our CCTV installation service. Always be aware of all events that occur inside and outside 
+                                of your home or business and keep your loved ones and belongings safe.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=en'><button type='button' class='btn btn-lg'>Make your pack!</button></a>";
                         }
                     ?>
                 </div>
@@ -179,8 +179,8 @@
                 </div>
             </div>      
         </div>
-        <hr>
-        <div class="container-fluid">
+        
+        <div class="container-fluid igray">
             <div class="row">
                 <div class="col-sm-4">
                     <center>
@@ -192,41 +192,41 @@
                         if ($lang == "es") {
                             echo "<h2>Alarma de seguridad</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Quiere contar con su hogar o negocio seguro incluso si se encuentra fuera de el? Ofrecemos nuestro servicio de instalacion
+                                de alarma de seguridad, el cual mantiene seguro su patrimonio y le brinda tranquilidad a usted cada vez que requiera salir.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=es' style='float: right'><button type='button' class='btn btn-lg'>Arma tu paquete!</button></a>";
                         }else {
                             echo "<h2>Alarm Security</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Do you want to count on your home or business insurance even if you are out of it? We offer our security alarm installation 
+                                service, which keeps your assets safe and gives you peace of mind whenever you need to leave your home or business.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=en' style='float: right'><button type='button' class='btn btn-lg'>Make your pack!</button></a>";
                         }
                     ?>
                 </div>
             </div>      
         </div>
-        <hr>
-        <div class="container-fluid">
+        
+        <div class="container-fluid gray">
             <div class="row">
                 <div class="col-sm-8">
                     <?php
                         if ($lang == "es") {
                             echo "<h2>Red de Voz y Datos</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Disfrute de sus servicios de telefonia e internet y siempre mantengase comunicado con nuestro servicio de instalacion de 
+                                voz y datos. Adecuamos su instalacion para que cuente con telefono o internet en los sitios de su hogar donde los necesite.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=es'><button type='button' class='btn btn-lg'>Arma tu paquete!</button></a>";
                         }else {
                             echo "<h2>Voice and Data Network</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Enjoy your telephone and internet services and always keep in touch with our voice and data installation service. We 
+                                adapt your installation so that you have telephone or internet in the places of your home where you need them.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=en'><button type='button' class='btn btn-lg'>Make your pack!</button></a>";
                         }
                     ?>
                 </div>
@@ -237,8 +237,8 @@
                 </div>
             </div>      
         </div>
-        <hr>
-        <div class="container-fluid">
+        
+        <div class="container-fluid igray">
             <div class="row">
                 <div class="col-sm-4">
                     <center>
@@ -250,17 +250,19 @@
                         if ($lang == "es") {
                             echo "<h2>Instalacion de Audio</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>Tiene una sala de entretenimiento y quiere equiparla con el mejor sistema de sonido y que a su vez el sonido sea uniforme 
+                                en toda la habitacion? Nuestro servicio de instalacion audio permite disfrutar al maximo de su sistema para esos momentos especiales con sus 
+                                familiares y amigos.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=es' style='float: right'><button type='button' class='btn btn-lg'>Arma tu paquete!</button></a>";
                         }else {
                             echo "<h2>Audio Installation</h2>";
                             echo "<br>";
-                            echo "<h4 class='justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat 
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>";
+                            echo "<h4 class='justify'>It has an entertainment room and wants to equip it with the best sound system and that in turn the sound is uniform 
+                                throughout the room? Our audio installation service allows you to enjoy the maximum of your sound system for those special moments with your family 
+                                and friends.</h4>";
+                            echo "<br>";
+                            echo "<a href='prices.php?lang=en' style='float: right'><button type='button' class='btn btn-lg'>Make your pack!</button></a>";
                         }
                     ?>
                 </div>

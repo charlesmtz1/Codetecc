@@ -47,6 +47,13 @@ h4 {
     background: -moz-linear-gradient(left,whitesmoke,white);
 }
 
+.igray{
+    background: linear-gradient(to right, whitesmoke, white);
+    background: -webkit-linear-gradient(right, whitesmoke,white);
+    background: -o-linear-gradient(right, whitesmoke, white);
+    background: -moz-linear-gradient(right,whitesmoke,white);
+}
+
 .bblue{
     background-color: #0856a9;
 }
